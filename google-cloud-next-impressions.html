@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Google Cloud Next 2016 — My impressions</title>
+
+  <meta name="description" content="Opinion and impressions about the Google Cloud Next 2016 and the future of GCP against AWS">
+
+  <link rel="me" href="https://twitter.com/leonardofed" />
+  <link rel="me" href="https://www.linkedin.com/in/leonardofederico" />
+
+  <link rel="stylesheet" href="css/tufte.css">
+
+  <!-- Google Fonts loaded here -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="marginotes.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="assets/js/dataviz.js" charset="utf-8"></script>
+
+
+  <meta content="Leonardo Federico | Cloud Academy" property="og:site_name">
+  <meta content="Leonardo Federico" property="og:title">
+  <meta content="article" property="og:type">
+  <meta content="./" property="og:url">
+
+  <link rel="canonical" href="index.html">
+</head>
+
+  <body>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44921644-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!--- Header and nav template site-wide -->
+
+<header>
+  <nav class="group">
+    <a href="index.html">Home</a>
+    <a href="about-me.html">About me</a>
+    <a href="books.html">Books</a>
+    <!--- Archive section
+    <a href="archive.html">Archive</a>
+    navbar menu -->
+  </nav>
+  <div class="">
+    <br>
+    <p>My name is <a href="index.html" rel="me">Leonardo Federico</a></p>
+    <br>
+    <p>I work on growth operations at <a href="https://cloudacademy.com" desc="A provider-neutral learning platform that helps both companies and individuals learn Cloud Computing technologies.
+">Cloud Academy</a> a great place where you get to play with all kinds of amazing cloud computing technologies. Over the years I created several fun projects. I also love chess, reading and writing.</p>
+  </div>
+
+
+</header>
+
+      <h1>Google Cloud Next 2016 — My impressions</h1>
+<p>March 28, 2016</p>
+<br>
+<a style="color:#0099FF; background-color:rgba(102, 204, 255, 0.07)" href="https://twitter.com/intent/tweet?text=Google%20Cloud%20Next%202016%E2%80%8A%E2%80%94%20http%3A%2F%2Fwww.leonardofed.io%2Fgoogle-cloud-next-impressions.html%20via%20%40leonardofed%0D%0A&source=clicktotweet&related=clicktotweet">[SHARE ON TWITTER]</a>
+<br>
+<br>
+<p> Well, a couple of days ago I run this twitter poll and apparently I got a bunch of positive votes. I'm sorry for the only guy who voted <em>"spare me"</em> but duty calls.
+</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Should I blog about my impressions of <a href="https://twitter.com/hashtag/GCPNext?src=hash">#GCPNext</a>?</p>&mdash; leonardo federico (@leonardofed) <a href="https://twitter.com/leonardofed/status/713520355504218112">March 26, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+<p><em><b>TL;TR?</b> No, it will only take 6min to read all of it.</em></p>
+<br>
+
+<p>
+Disclaimer: this post doesn't want to be a list of new products and features recently announced by Google @ <a href="https://cloudplatformonline.com/NEXT2016.html">GCPNEXT</a>. If you're looking for that this is not the right post for you and I'm pretty sure the <a style="color:#33393D; background-color:rgba(255, 173, 102, 0.07)" href="http://venturebeat.com/tag/gcp-next-2016/"><strong>Venture</strong></a><a style="color:#CC0000; background-color:rgba(255, 173, 102, 0.07)" href="http://venturebeat.com/tag/gcp-next-2016/VentureBeat"><strong>Beat</strong></a> staff is way better than me at this.
+<br>
+<br>
+Anyway, let's cut the chase.
+<br>
+This year’s GCP-Next was a much awaited event. Someone already said this is a sort of  <em>"do-or-die year"</em> for Google Cloud.
+They hired Diane Green, and a former CTO of Redhat, Brian Stevens  for their enterprise experience and also have been investing heavily.
+It's nothing short than an All in.
+</p>
+<br>
+<br>
+<p>
+Below some stuff I personally liked and some that I didn't during the conference.
+<h2>1. High profile speakers</h2>
+<br>
+<p>Featuring Sundar Pichai and Eric Schmidt was such a neat move. Their presence at this #GCPNEXT event is telling that cloud for Google seems to be a higher priority than even 2 years ago. The message that they wanted to send was dead clear: we are in and we are serious.
+<br>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;We&#39;re serious about this business.&quot; Diane Greene, Google. <a href="https://twitter.com/hashtag/GCPNEXT2016?src=hash">#GCPNEXT2016</a></p>&mdash; Jordan &#39;Jaws&#39; Novet (@jordannovet) <a href="https://twitter.com/jordannovet/status/712679181889380352">March 23, 2016</a></blockquote>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<br>
+
+<h2>2. Customers, customers and customers.</h2>
+<br>
+<p>
+  What Google Cloud needs is a better sales story. AWS consistently beats out Google in this respect.
+  Lately they have been doing a bit more with Spotify and Apple stories but there should definitely be more success stories published like these. Featuring mainstream customers like Disney and Home Depot was surely a smart move.
+  But not even a mention to Apple.
+<br>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“Tech is always in service to the story.” See why <a href="https://twitter.com/DisneyInteract">@DisneyInteract</a>’s team chose GCP: <a href="https://t.co/QK7HWn39EJ">https://t.co/QK7HWn39EJ</a> <a href="https://twitter.com/hashtag/GCPNEXT?src=hash">#GCPNEXT</a> <a href="https://t.co/XQpkbMSGAt">pic.twitter.com/XQpkbMSGAt</a></p>&mdash; GoogleCloudPlatform (@googlecloud) <a href="https://twitter.com/googlecloud/status/712770870863761408">March 23, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br>
+
+<h2>3. <em>BigQuery</em> advancements</h2>
+  <br>
+  <p>This is the GCP’s cloud-based analytics data warehouse, <em>BigQuery</em>, and is for sure one of the core analytics tools in Google’s cloud. At NEXT, Google announced a price drop of 50% for data stored in <em>BigQuery</em> for more than 90 days; auto table partitions
+    (making data management easier); and a capacitor storage engine, which Google says could speed up some queries by 10x.</p>
+  <br>
+  <p>
+  I loved this announcement at Google Cloud Next. The whole company has long been a thought-leader in this space, and this shows in the sophistication and quality of its data offerings.</p>
+<p>  <span desc="This is a quote by a Nicholas Harteau's (VP Engineering and Infrastructure at Spotify) blog post. ">From traditional batch processing with Dataproc, to rock-solid event delivery with Pub/Sub to the nearly magical abilities of <em>BigQuery</em>, building on Google’s data infrastructure provides
+   us with a significant advantage where it matters the most.</span>
+   I'm pretty sure Big Data is one of the core strength of Google Cloud right now and GCP's Data Engineering features will be one of the main reason why companies will use GCP's techonologies over AWS.
+<br>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">FINALLY I CAN TELL THE WORLD THAT BIGQUERY IS THE BEST THING THAT HAS EVER HAPPENED TO ME <a href="https://t.co/eI6047A5CQ">https://t.co/eI6047A5CQ</a></p>&mdash; Mattias P Johansson (@mpjme) <a href="https://twitter.com/mpjme/status/702167231623516160">February 23, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<br>
+<br>
+<h2>Conclusion</h2>
+<br>
+<p>
+  So, in conclusion.. Does GCP have a chance in the current Cloud computing scenario?
+  <br><br>Cloud migrations are difficult and expensive and most of the times are a piecemeal.
+  A company often doesn't adopt all services from one vendor (AWS or GCP).
+  <br><br><em>They adopt the services that make sense to them at a given point in time.</em><br><br>
+
+  That's exactly what happened to Spotify. <a style="color:#1ED661; background-color:rgba(30, 214, 97, 0.1)" href="https://labs.spotify.com/">Spotify DID NOT switch from AWS to Google</a> but only moved part of their local internal infrastructures to Google.
+  That means that they're still using AWS services (specifically they're still using Amazon CloudFront because it's faster and easier than anything else out there).
+  <br>
+<br>
+  Companies are not purchasing monoliths:
+  different parts of a single company may purchase different cloud services from different vendors, for example.
+  As companies shift to microservices this trend will only increase and the market is large enough to support competitors.
+    <br><br>
+  So, my final answer is <strong>YES</strong>. I would say that Google still has a great chance to grow.
+
+
+</p>
+<br>
+<br>
+<p>
+  That's pretty much it. Hope you enjoyed this write-up.
+  <br><em>Next steps</em>: if you have interesting ideas or topics let me know on twitter <a href="https://twitter.com/leonardofed">@leonardofed</a>.
+</p>
+<br>
+<br>
+
+<p>If you really want to deepen your knowledge of Google Cloud Platform, I strongly recommend to check out <a style="color:#0099FF; background-color:rgba(102, 204, 255, 0.07)" href="https://cloudacademy.com" desc="A provider-neutral learning platform that helps both companies and individuals learn Cloud Computing technologies.">Cloud Academy</a>.
+You can use the <a style="color:#189BE4; background-color:rgba(102, 204, 255, 0.07)" href="https://cloudacademy.com/courses/?provider=google" desc="Site deployments. Data management. Online services. Use Cloud Academy courses to learn all the skills you'll need to provide and support today's most in-demand Internet technologies.">Cloud Academy Courses</a> to get started with GCP right now and deepen some of the topics that I've just mentioned in this article.
+
+
+
+</p>
+
+<br>
+<br>
+<br>
+
+<script>
+
+  ////////////////////////////////////////////////////
+
+  $(document).ready(function () {
+    var admireesJSON = $.getJSON("https://raw.githubusercontent.com/fdansv/admirees/master/admirees.json", function(data) {
+      data = data.reverse()
+      var text = data.reduce(function(p,c,i){
+        if (i === data.length-1){
+          p += "and "
+        }
+        p += '<a href = "' + c.url + '" desc = "' + c.desc + '" target="_blank">' + c.name
+        if (i !== data.length-1){
+          p += '</a>, '
+        }
+
+        return p
+      }, "Here's some people doing awesome work that you may or may not have heard of, that I enjoy hearing about: ")
+      $(".admirees").html(text)
+      $("a,span").marginotes()
+    })
+  })
+
+</script>
+
+
+  </body>
+</html>
