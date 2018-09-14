@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Proper setup of a new AWS account</title>
+    <meta name="description" content="Kielbasa tenderloin boudin bacon cupim, pastrami strip steak rump picanha meatloaf venison meatball ribeye. Burgdoggen t-bone jowl venison biltong andouille. Turducken shankle tongue landjaeger drumstick, pancetta porchetta. Brisket ham turkey andouille picanha. Pancetta chuck shank ham.">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ae9f90c1.css" as="style"><link rel="preload" href="/assets/js/app.f1d4dc21.js" as="script"><link rel="preload" href="/assets/js/18.437b09cc.js" as="script"><link rel="prefetch" href="/assets/js/8.63c21b21.js"><link rel="prefetch" href="/assets/js/2.41eed2c1.js"><link rel="prefetch" href="/assets/js/3.6caed819.js"><link rel="prefetch" href="/assets/js/4.2d54b0ab.js"><link rel="prefetch" href="/assets/js/5.86bf620a.js"><link rel="prefetch" href="/assets/js/6.f8a2525a.js"><link rel="prefetch" href="/assets/js/7.5fb64550.js"><link rel="prefetch" href="/assets/js/9.0d160373.js"><link rel="prefetch" href="/assets/js/10.a32308ed.js"><link rel="prefetch" href="/assets/js/11.9fdad19a.js"><link rel="prefetch" href="/assets/js/12.21d0b045.js"><link rel="prefetch" href="/assets/js/13.2166c37e.js"><link rel="prefetch" href="/assets/js/14.6cd2232d.js"><link rel="prefetch" href="/assets/js/15.6abf4cc7.js"><link rel="prefetch" href="/assets/js/16.43cdaf85.js"><link rel="prefetch" href="/assets/js/17.2a75a629.js"><link rel="prefetch" href="/assets/js/19.2eb2e962.js"><link rel="prefetch" href="/assets/js/20.dbdb70ed.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ae9f90c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links" style="max-width:nullpx;"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">Archive</a></div><div class="nav-item"><a href="/bookshelf/" class="nav-link">Bookshelf</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">Archive</a></div><div class="nav-item"><a href="/bookshelf/" class="nav-link">Bookshelf</a></div> <!----></nav>  <!----> </div> <div class="page"> <div class="content"><h1 id="proper-setup-of-a-new-aws-account"><a href="#proper-setup-of-a-new-aws-account" aria-hidden="true" class="header-anchor">#</a> Proper setup of a new AWS account</h1> <p>Getting started with AWS account is something tricky especially when you're moving your first steps in the Cloud and you're so impatient to play (exactly as I did when I put this blog up on AWS) with all kinds of these amazing services. That's why having a solid checklist is something extremely important. Nice things about it? It won't take too much and a couple of extra mins now will save you hours later on.</p> <p>TL;TR 1. Create a root-account first and use IAM users for everything else. 2. IAM - take care of pwd-policies and set in place a good aws account hierarchy 3. Monitor since day-1</p> <p>If you don't have an AWS account yet and you want to get started immediately in a real AWS Management Console. You can create a Cloud Academy account and start get started with some of our Hands-on labs:</p> <ul><li>Create Your First Amazon S3 Bucket</li> <li>Introduction to IAM</li> <li>Serve your files using the CloudFront CDN</li></ul> <h3 id="_1-signing-up-root-account"><a href="#_1-signing-up-root-account" aria-hidden="true" class="header-anchor">#</a> 1. Signing up - root-account</h3> <p>When you sign up for AWS, your account is automatically signed up for all services in Amazon Web Services. And here's your first smart move: no matter if you're creating a new AWS account for a company or a personal project, make sure you use an email alias (e.g. aws-root@acme.com) instead of an actual person's email address. Keep in mind: there is only one root credential for each AWS account and it has full admin privileges that cannot be revoked. This your root credential should not be used for day-to-day administration. From now on, you should use your AWS root account only for these three main reasons:</p> <ol><li>You have to set up a new account;</li> <li>You have to update billing information</li> <li>All your IAM Users lost access to the account (e.g. if an IAM policy change accidentally and blocks all users from signing in to the account).</li> <li>Point of contact for security related events 5. For changing the support levels (e.g., basic to developer/business/enterprise)</li></ol> <h3 id="_2-iam-users-pwd-policies"><a href="#_2-iam-users-pwd-policies" aria-hidden="true" class="header-anchor">#</a> 2. IAM Users - Pwd policies</h3> <p>Once you've locked away your root-account it's time for IAM users. That's what you'll use to access your AWS Management Console for day-to-day administration. And first thing you want to care about for new IAM users is: password-policy. Having in place a solid password policy is something that will ensure you don't do anything that will need to be fixed later. The IAM console will give Secutiry Status - Full size imageyou a big help as they already support policies that include minimum length and complexity requirements. The AWS documentation here is great.
+And after you complete each of these tasks from your root-account, a green check box will light up.</p> <p>Once you settled in your pwd policy, you'll go straight to separation of duty. Best practice of balacing responsibility among multiple users so that no one person has full control of everything.</p> <h3 id="_3-iam-users-distributing-roles"><a href="#_3-iam-users-distributing-roles" aria-hidden="true" class="header-anchor">#</a> 3. IAM Users - distributing roles</h3> <p>Disclaimer: I found this post very comprensive on this part. So I'll report a valuable piece of that. Another comprensive guide here comes from directly from the AWS Blog by Matt Ramsay.</p> <p>Before you even touch any service, AWS Mgm Dashboard - Full size imagesecure your root account! Log in, go to Security Credentials (top right part of the screen) and add a multi-factor authentication device for the root user. Then create another user for yourself:</p> <p><img src="http://i.imgur.com/OZfOJz7.png" alt="alt Mgm Dashboard"></p> <ul><li><strong>Go to Groups</strong></li></ul> <p>Create a super admin group with the policy
+AdministratorAccess (this gives IAM users access to almost everything).</p> <ul><li><strong>Go to Users</strong></li></ul> <p>Create a user for yourself, adding it to the group
+you created earlier.
+You can also generate an API key here - make note of it because
+the secret is not shown again and make sure you never,
+ever, post it to GitHub (lots of people do that and it's really bad)</p> <ul><li><strong>Go to Dashboard</strong></li></ul> <p>Set a sign-in URL for IAM users (bookmark this) and check that all boxes are green which means you did everything correctly.</p> <p><img src="http://i.imgur.com/DXDvqsH.png" alt="alt Mgm Dashboard"></p> <p>Finally, go to My Account (again, top right of the screen) and set the correct Contact, Currency and Security Challenges settings. Also, enable IAM User Access to Billing Information. Now logout of the root account and only use the IAM user you created earlier from now on.</p> <p>Once correctly setup, your AWS account hierarchy will look something like this.</p> <p>'Admin-Area' + 'Dev-Area' are new IAM groups. The first user of 'Admin-Area' is root-account+1
+(who is also a root user).</p> <p><img src="http://i.imgur.com/pE2BqQn.png" alt="alt Mgm Dashboard"></p> <p>Email services like gmail allow your email addresses to end in +1, +2, +11, +22 etc.. and you can use that to create unique AWS accounts, yet have the emails delivered to same email address. You decide every level of permission for each IAM group.</p> <p>A common best practice is revoke any 'DELETE' privileges from any of the IAM groups (including admin group).</p> <div class="language- extra-class"><pre class="language-text"><code>//revoke any 'DELETE' privileges
+
+
+{
+ &quot;Version&quot;: &quot;2012-10-17&quot;,
+ &quot;Statement&quot;: [
+	{
+		&quot;Sid&quot;: &quot;Stmt&quot;,
+		&quot;Effect&quot;: &quot;Deny&quot;,
+		&quot;Action&quot;: [
+			&quot;iam:DeactivateMFADevice&quot;,
+			&quot;iam:DeleteAccessKey&quot;,
+			&quot;iam:DeleteAccountPasswordPolicy&quot;,
+			&quot;iam:DeleteGroup&quot;,
+			&quot;iam:DeleteGroupPolicy&quot;,
+			&quot;iam:DeleteInstanceProfile&quot;,
+			&quot;iam:DeleteLoginProfile&quot;,
+			&quot;iam:DeleteRole&quot;,
+			&quot;iam:DeleteRolePolicy&quot;,
+			&quot;iam:DeleteSigningCertificate&quot;,
+			&quot;iam:DeleteUser&quot;,
+			&quot;iam:DeleteUserPolicy&quot;
+		],
+		&quot;Resource&quot;: [
+			&quot;*&quot;
+		]
+	}
+	]
+}
+</code></pre></div><p>Recap - here the General Best Practices that AWS stongly recommendas mandatory to create a secure system:</p> <p>Create a strategy to control privilege at the user level.
+Monitor and audit your users, and regularly review privileges.
+Identify which individuals should interact with the service
+provider regarding billing, security, and operations matters, and
+grant authorization accordingly.
+Ensure continuous communication with the service provider,
+even if individuals change roles or leave the company.</p> <ol start="3"><li>IAM - Access Key</li></ol> <p>You'll face with IAM access keys when will need to sign in your AWS management console thru the API. Usually three main scenarios:
+First; you have an application or AWS CLI scripts running on an Amazon EC2 instance
+Second; you need to grant cross-account access with limited permissions to access the trusted account. Great tutorial here.</p> <p>The best way to keep your access keys secure over time is to rotate them often. AWS allows each user to have two sets of keys to make key rotation easy. And the most of the times, you don't even need a long-term access key that never expires (as you have with an IAM user). So be really careful.</p> <ol start="4"><li>IAM - Two Factor for every new account</li></ol> <p>This has turned out to be an essential tool. As shown in above diagrams, enable TFA on Root account and every IAM user account. Enforcing of this policy can be done at the IAM Group level by simply attaching a custom policy. Here is a sample policy that enables TFA for all IAM accounts in that group.
+It will take 2 seconds more.</p> <div class="language- extra-class"><pre class="language-text"><code>//enables TFA for all IAM accounts
+
+
+{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+	{
+	  &quot;Sid&quot;: &quot;Stmt&quot;,
+	  &quot;Effect&quot;: &quot;Allow&quot;,
+	  &quot;Action&quot;: [
+		&quot;*&quot;
+	  ],
+	  &quot;Condition&quot;: {
+		&quot;Null&quot;: {
+		  &quot;aws:MultiFactorAuthAge&quot;: &quot;false&quot;
+		}
+	  },
+	  &quot;Resource&quot;: [
+		&quot;*&quot;
+	  ]
+	}
+  ]
+}	     
+</code></pre></div><ol start="5"><li>Monitoring</li></ol> <p>Monitoring since day 1 is extremely important and AWS provides several different tools to help customers monitor their account activities.</p> <ul><li>You can create a security email distribution list to receive
+security-related notifications</li> <li>Create an Amazon Simple Notification Service (SNS)
+topic for security notifications and subscribe the security email
+distribution list to the topic. It's pretty good to have fully-customized alerts.</li> <li>The AWS documentation says &quot;Configure AWS usage and billing reports&quot;.
+Good luck. Fortunately this tool will make things a whole lot easier.</li> <li>Keep in mind to enable CloudTrail in all regions</li> <li>CloudTrail integration with CloudWatch Logs and launch
+the provided AWS CloudFormation template to create CloudWatch
+alarms for</li> <li>Enable AWS Config. Use the predefined rules CLOUD_TRAIL_ENABLED
+and RESTRICTED_INCOMING_TRAFFIC to notify the security
+SNS topic if</li> <li>CloudTrail is disabled for the account or if someone creates
+insecure security group rules.</li> <li>Create an S3 bucket for storing monitoring data and configure
+the bucket policy to allow the appropriate services
+(CloudTrail or AWS Config are perfect)
+to store</li></ul> <p>If you really want to deepen your knowledge of Amazon Web Services, I strongly recommend to check out Cloud Academy. You can use the Cloud Academy Hands-on Labs to do exactly all the stuff that I explained in this post and much more.</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/18.437b09cc.js" defer></script><script src="/assets/js/app.f1d4dc21.js" defer></script>
+  </body>
+</html>
